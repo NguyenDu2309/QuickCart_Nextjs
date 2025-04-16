@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -19,7 +19,8 @@
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.2",
     "react-toastify": "^11.0.5",
-    "sharp": "^0.34.1"
+    "sharp": "^0.34.1",
+    "styled-jsx": "^5.1.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
