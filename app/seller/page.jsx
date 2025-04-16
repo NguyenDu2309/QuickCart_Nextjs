@@ -20,7 +20,7 @@ const AddProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = new formData()
+    const formData = new FormData()
 
     formData.append('name', name)
     formData.append('description', description)
@@ -28,7 +28,7 @@ const AddProduct = () => {
     formData.append('price', price)
     formData.append('offerPrice', offerPrice)
 
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < files.length; i++) {
       formData.append('images', files[i])
     }
 
