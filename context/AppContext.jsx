@@ -25,15 +25,9 @@ export const AppContextProvider = (props) => {
 
     const fetchProductData = async () => {
         try {
-            const {data} = await axios.get('api/product/list')
-
-            if(data.success){
-                setProducts(data.product)
-            } else{
-                toast.error(data.message)
-            }
+            setProducts(productsDummyData);
         } catch (error) {
-            toast.error(error.message)
+            toast.error(error.message);
         }
     }
 
@@ -109,9 +103,10 @@ export const AppContextProvider = (props) => {
     }, [])
 
     useEffect(() => {
-        if(condi)
-        fetchUserData()
-    }, [])
+        if(user){
+            fetchUserData()
+        }
+    }, [user])
 
     const value = {
         user, getToken,
